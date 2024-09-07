@@ -3,8 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Waste Segregation</title>
     <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFDD0;
+}
+
+header {
+    background-color: #FFFDDO;
+    padding: 10px 10px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.logo img {
+    height: 90px;
+    margin-right: 10px; 
+    width: 185px;
+    padding-left: 15px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.logo span {
+    color: rgb(28,130,0);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+nav ul li:hover > a {
+    color: #75a83f;
+}
+
+nav ul li .dropdown {
+    display: none;
+    position: absolute;
+    background-color:#d6d9c6 ;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    padding: 10px 0;
+}
+
+nav ul li:hover .dropdown {
+    display: block;
+}
+
+nav ul li .dropdown li {
+    margin: 0;
+}
+
+nav ul li .dropdown li a {
+    padding: 10px 20px;
+    display: block;
+}
+
+.signup-login .button {
+    background-color: rgb(28,130,0);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    padding-left: 20px;
+}
+
+.signup-login .button:hover {
+    background-color: #102e07;
+}
+hr{
+    border-width: 2.5px;
+}
         body {
             font-family: Arial, sans-serif;
             background-color: #FFFFED;
@@ -73,10 +181,115 @@
         th {
             background-color: #444;
         }
-        
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFDD0;
+}
+
+footer {
+    background-color: #1c1c1c;
+    color: white;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.footer-container div {
+    text-align: left;
+}
+
+.social-media h3, 
+.contact-info h3 {
+    margin-bottom: 10px;
+}
+
+.icons a {
+    color: white;
+    margin-right: 20px;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.icons a:hover {
+    color: #808080;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-container div {
+        margin-bottom: 20px;
+    }
+}
     </style>
 </head>
 <body>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="./assests/LOGO.jpg" alt="Logo">
+                <!-- <span>Swachhta Saathi</span> -->
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a>
+                       
+                    </li>
+                    <li><a href="#">Waste Management</a>
+                        
+                    </li>
+                    <li><a href="#">Articles & Publications</a></li>
+                    <li><a href="#">Join Us</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Volunteer</a></li>
+                            <li><a href="#">Member</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="signup-login">
+                <a href="#" class="button">Sign up/Login</a>
+            </div>
+        </div>
+    </header>
+    <hr> 
     <h1>Waste segregation at source can reduce up to 250 tonnes of dump from entering into landfills.</h1>
     <div class="container">
         <img fetchpriority="high" decoding="async" width="1024" height="398" src="https://greensutra.in/wp-content/uploads/2020/03/Waste-Segregation-1024x398.png" alt="" class="wp-image-6746 entered lazyloaded" data-lazy-srcset="https://greensutra.in/wp-content/uploads/2020/03/Waste-Segregation-1024x398.png 1024w, https://greensutra.in/wp-content/uploads/2020/03/Waste-Segregation-600x233.png 600w, https://greensutra.in/wp-content/uploads/2020/03/Waste-Segregation-300x117.png 300w, https://greensutra.in/wp-content/uploads/2020/03/Waste-Segregation-768x299.png 768w, https://greensutra.in/wp-content/uploads/2020/03/Waste-Segregation-945x368.png 945w, https://greensutra.in/wp-content/uploads/2020/03/Waste-Segregation.png 1080w">
@@ -134,5 +347,25 @@
         <div class="section-title">Placement of Bins for Waste Segregation at Source</div>
         <p>The best way to segregate waste is to segregate it at source. To enable this, it is always recommended to place the right type of bin in the respective area.</p>
     </div>
+    <footer>
+        <div class="footer-container">
+            <div class="social-media">
+                <h3>FOLLOW US</h3>
+                <div class="icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <p>&copy; Swachhta Saathi . All rights reserved</p>
+            </div>
+
+            <div class="contact-info">
+                <h3>CONTACT US</h3>
+                <p><i class="fas fa-phone"></i> +91 9998779344, +91 9998779344</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:sih@aicte-india.org">sds@bitmesra.ac.in</a>, <a href="mailto:hackathon@sds.org">hackathon@sds.org</a></p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
