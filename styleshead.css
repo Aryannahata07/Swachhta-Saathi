@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F6F7EF;
+}
+
+header {
+    background-color: #F6F7EF;
+    padding: 10px 10px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.logo img {
+    height: 90px;
+    margin-right: 10px; 
+    width: 185px;
+    padding-left: 15px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.logo span {
+    color: rgb(28,130,0);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+nav ul li:hover > a {
+    color: #75a83f;
+}
+
+nav ul li .dropdown {
+    display: none;
+    position: absolute;
+    background-color:#d6d9c6 ;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    padding: 10px 0;
+}
+
+nav ul li:hover .dropdown {
+    display: block;
+}
+
+nav ul li .dropdown li {
+    margin: 0;
+}
+
+nav ul li .dropdown li a {
+    padding: 10px 20px;
+    display: block;
+}
+
+.signup-login .button {
+    background-color: rgb(28,130,0);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    padding-left: 20px;
+}
+
+.signup-login .button:hover {
+    background-color: #102e07;
+}
+hr{
+    border-width: 2.5px;
+}
