@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <link rel="stylesheet" href="styleheader.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylefooter.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="./assests/swachhta saathi.jpg" alt="Logo">
+                <!-- <span>Swachhta Saathi</span> -->
+             </div> 
+            <nav>
+                <ul>
+                    <li><a href="http://127.0.0.1:5500/WasteManagementSystem.html/opening_page.html">Home</a></li>
+                    <li><a href="#">About Us</a>
+                       
+                    </li>
+                    <li><a href="http://127.0.0.1:5500/WasteManagementSystem.html/wastemanagement.html">Waste Management</a>
+                        
+                    </li>
+                    <li><a href="#">Articles & Publications</a></li>
+                    <li><a href="#">Join Us</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Volunteer</a></li>
+                            <li><a href="#">Member</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="signup-login">
+                <a href="http://127.0.0.1:5500/WasteManagementSystem.html/signup_page.html" class="button">Sign up/Login</a>
+            </div>
+        </div>
+    </header>
+    <hr> 
+     <!-- <div class="logo">
+        <a href="http://127.0.0.1:5500/WasteManagementSystem.html/opening_page.html"><img src="./assests/swachhta saathi.jpg" alt="Logo" height="100px" width="100px"></a>
+        <span>Swachhta Saathi</span> 
+    </div>  -->
+    <div class="signup-container">
+        <h2>Just browsing? Let's keep in touch.</h2>
+        <p>Sign up to get the latest news and notes on effective waste management at home.</p>
+        <form action="/submit-form" method="post">
+            <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+            <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <input type="text" id="zip-code" name="zip-code" placeholder="PIN Code" required>
+            <button type="submit" class="sign-up-button">Sign Me Up</button>
+        </form>
+        <p>Already have an account?<a href="http://127.0.0.1:5500/WasteManagementSystem.html/sign_inpage.html">Log In</a></p>
+    </div>
+    <footer></footer>
+        <div class="footer-container">
+            <div class="social-media">
+                <h3>FOLLOW US</h3>
+                <div class="icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <p>&copy; Swachhta Saathi . All rights reserved</p>
+            </div>
+
+            <div class="contact-info">
+                <h3>CONTACT US</h3>
+                <p><i class="fas fa-phone"></i> +91 9998779344, +91 9998779344</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:sih@aicte-india.org">sds@bitmesra.ac.in</a>, <a href="mailto:hackathon@sds.org">hackathon@sds.org</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
