@@ -1,0 +1,179 @@
+<!-- <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Calendar</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        .calendar {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .calendar div {
+            width: 14.28%;
+            border: 1px solid #ddd;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .tick {
+            color: green;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>House</th>
+                <th>Calendar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>House 1</td>
+                <td><div class="calendar" id="calendar1"></div></td>
+            </tr>
+            <tr>
+                <td>House 2</td>
+                <td><div class="calendar" id="calendar2"></div></td>
+            </tr>
+            <tr>
+                <td>House 3</td>
+                <td><div class="calendar" id="calendar3"></div></td>
+            </tr>
+            <tr>
+                <td>House 4</td>
+                <td><div class="calendar" id="calendar4"></div></td>
+            </tr>
+            <tr>
+                <td>House 5</td>
+                <td><div class="calendar" id="calendar5"></div></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        function createCalendar(id) {
+            const calendar = document.getElementById(id);
+            for (let i = 1; i <= 30; i++) {
+                const dateDiv = document.createElement('div');
+                dateDiv.textContent = i;
+                dateDiv.addEventListener('click', function() {
+                    dateDiv.innerHTML = '✓'; // Tick mark
+                    dateDiv.classList.add('tick');
+                });
+                calendar.appendChild(dateDiv);
+            }
+        }
+
+        for (let i = 1; i <= 5; i++) {
+            createCalendar('calendar' + i);
+        }
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Calendar</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        .calendar {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .calendar div {
+            width: 14.28%;
+            border: 1px solid #ddd;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .tick {
+            color: green;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>House</th>
+                <th>Calendar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>House 1</td>
+                <td><div class="calendar" id="calendar1"></div></td>
+            </tr>
+            <tr>
+                <td>House 2</td>
+                <td><div class="calendar" id="calendar2"></div></td>
+            </tr>
+            <tr>
+                <td>House 3</td>
+                <td><div class="calendar" id="calendar3"></div></td>
+            </tr>
+            <tr>
+                <td>House 4</td>
+                <td><div class="calendar" id="calendar4"></div></td>
+            </tr>
+            <tr>
+                <td>House 5</td>
+                <td><div class="calendar" id="calendar5"></div></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        const tickCounts = [0, 0, 0, 0, 0];
+
+        function createCalendar(id, index) {
+            const calendar = document.getElementById(id);
+            for (let i = 1; i <= 30; i++) {
+                const dateDiv = document.createElement('div');
+                dateDiv.textContent = i;
+                dateDiv.addEventListener('click', function() {
+                    if (!dateDiv.classList.contains('tick')) {
+                        dateDiv.innerHTML = '✓'; // Tick mark
+                        dateDiv.classList.add('tick');
+                        tickCounts[index]++;
+                        localStorage.setItem('tickCounts', JSON.stringify(tickCounts));
+                    }
+                });
+                calendar.appendChild(dateDiv);
+            }
+        }
+
+        for (let i = 1; i <= 5; i++) {
+            createCalendar('calendar' + i, i - 1);
+        }
+    </script>
+</body>
+</html>
+ 
+
+
