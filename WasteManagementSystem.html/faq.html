@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="faq.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="styleheader.css">
+    <link rel="stylesheet" href="stylefooter.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="./assests/swachhta saathi.jpg" alt="Logo">
+                <!-- <span>Swachhta Saathi</span> -->
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="http://127.0.0.1:5500/WasteManagementSystem.html/opening_page.html">Home</a></li>
+                    <li><a href="http://127.0.0.1:5500/WasteManagementSystem.html/FAQ.html">FAQ</a>
+                       
+                    </li>
+                    <li><a href="http://127.0.0.1:5500/WasteManagementSystem.html/wastemanagement.html">Waste Management</a>
+                        
+                    </li>
+                    <li><a href="http://127.0.0.1:5500/WasteManagementSystem.html/work.html">Our Work</a></li>
+                    <li><a href="#">Join Us</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Volunteer</a></li>
+                            <li><a href="#">Member</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="signup-login">
+                <a href="http://127.0.0.1:5500/WasteManagementSystem.html/signup_page.html" class="button">Sign up/Login</a>
+            </div>
+        </div>
+    </header>
+    <hr> 
+    <div class="faq-container">
+        <h1>Frequently Asked Questions</h1>
+        <div class="faq-item">
+            <button class="faq-question">Q: What should I expect when scheduling a bulk pickup? <span class="plus">+</span></button>
+            <div class="faq-answer">
+                <p>You can expect a confirmation of the scheduled pickup time and details of what is accepted.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Q: Is bulky pickup available in my area? <span class="plus">+</span></button>
+            <div class="faq-answer">
+                <p>Bulky pickup availability depends on your location. Please check with local services.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Q: Can I schedule a pickup online? <span class="plus">+</span></button>
+            <div class="faq-answer">
+                <p>Yes, you can schedule pickups through our website or app.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Q: How do I schedule a bulky pickup? <span class="plus">+</span></button>
+            <div class="faq-answer">
+                <p>You can schedule a bulky pickup by calling our customer service or using our online system.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Q: How much does a bulk pickup cost? <span class="plus">+</span></button>
+            <div class="faq-answer">
+                <p>The cost varies based on your location and the type of items being picked up.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Q: Where can I view my bulky pickup schedule? <span class="plus">+</span></button>
+            <div class="faq-answer">
+                <p>You can view your schedule in your account dashboard on our website.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Q: What items are acceptable/unacceptable? <span class="plus">+</span></button>
+            <div class="faq-answer">
+                <p>We accept furniture, appliances, and other large items. Hazardous materials are not accepted.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Q: How do I prepare items for bulky pickup? <span class="plus">+</span></button>
+            <div class="faq-answer">
+                <p>Please ensure items are properly packed and placed at the curbside by the scheduled pickup time.</p>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="social-media">
+                <h3>FOLLOW US</h3>
+                <div class="icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <p>&copy; Swachhta Saathi . All rights reserved</p>
+            </div>
+
+            <div class="contact-info">
+                <h3>CONTACT US</h3>
+                <p><i class="fas fa-phone"></i> +91 9998779344, +91 9998779344</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:sih@aicte-india.org">sds@bitmesra.ac.in</a>, <a href="mailto:hackathon@sds.org">hackathon@sds.org</a></p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // JavaScript to toggle FAQ items
+        const faqItems = document.querySelectorAll('.faq-question');
+
+        faqItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const faqAnswer = item.nextElementSibling;
+                faqAnswer.classList.toggle('open');
+                
+                // Toggle the '+' to '-' when clicked
+                const plusSign = item.querySelector('.plus');
+                if (faqAnswer.classList.contains('open')) {
+                    plusSign.textContent = '-';
+                } else {
+                    plusSign.textContent = '+';
+                }
+            });
+        });
+    </script>
+   
+</body>
+</html>

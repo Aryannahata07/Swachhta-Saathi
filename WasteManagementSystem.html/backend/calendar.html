@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+        .checkbox {
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Monthly Calendar</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>User</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <!-- Add more days as needed -->
+                <th>30</th>
+            </tr>
+        </thead>
+        <tbody id="calendar-body">
+            <!-- Rows will be added by JavaScript -->
+        </tbody>
+    </table>
+
+    <script>
+        const users = 10;
+        const days = 30;
+        const calendarBody = document.getElementById('calendar-body');
+
+        for (let i = 1; i <= users; i++) {
+            const row = document.createElement('tr');
+            const userCell = document.createElement('td');
+            userCell.textContent = `User ${i}`;
+            row.appendChild(userCell);
+
+            for (let j = 1; j <= days; j++) {
+                const cell = document.createElement('td');
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.className = 'checkbox';
+                checkbox.dataset.user = i;
+                checkbox.dataset.day = j;
+                cell.appendChild(checkbox);
+                row.appendChild(cell);
+            }
+        }

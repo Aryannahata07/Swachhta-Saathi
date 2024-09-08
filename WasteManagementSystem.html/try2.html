@@ -1,0 +1,140 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tick Counts</title>
+    <style>
+        table {
+            width: 50%;
+            margin: auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Tick Counts for Each House</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>House</th>
+                <th>Tick Count</th>
+            </tr>
+        </thead>
+        <tbody id="tickCountsTable">
+            <tr>
+                <td>House 1</td>
+                <td id="count1">0</td>
+            </tr>
+            <tr>
+                <td>House 2</td>
+                <td id="count2">0</td>
+            </tr>
+            <tr>
+                <td>House 3</td>
+                <td id="count3">0</td>
+            </tr>
+            <tr>
+                <td>House 4</td>
+                <td id="count4">0</td>
+            </tr>
+            <tr>
+                <td>House 5</td>
+                <td id="count5">0</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        function updateTickCounts() {
+            const tickCounts = JSON.parse(localStorage.getItem('tickCounts')) || [0, 0, 0, 0, 0];
+            for (let i = 1; i <= 5; i++) {
+                document.getElementById('count' + i).textContent = tickCounts[i - 1];
+            }
+        }
+        window.onload = updateTickCounts;
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tick Counts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        table {
+            width: 50%;
+            margin: auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Tick Counts for Each House</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>House</th>
+                <th>Tick Count</th>
+            </tr>
+        </thead>
+        <tbody id="tickCountsTable">
+            <tr>
+                <td>House 1</td>
+                <td id="count1">0</td>
+            </tr>
+            <tr>
+                <td>House 2</td>
+                <td id="count2">0</td>
+            </tr>
+            <tr>
+                <td>House 3</td>
+                <td id="count3">0</td>
+            </tr>
+            <tr>
+                <td>House 4</td>
+                <td id="count4">0</td>
+            </tr>
+            <tr>
+                <td>House 5</td>
+                <td id="count5">0</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        function updateTickCounts() {
+            const tickCounts = JSON.parse(localStorage.getItem('tickCounts')) || [0, 0, 0, 0, 0];
+            for (let i = 1; i <= 5; i++) {
+                document.getElementById('count' + i).textContent = tickCounts[i - 1];
+            }
+        }
+
+        window.onload = updateTickCounts;
+    </script>
+</body>
+</html>
